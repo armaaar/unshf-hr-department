@@ -1,0 +1,8 @@
+<div class="double-switch">
+  <span class="double-switch__label">{{ firstOption?.label | titlecase }}</span>
+  <app-switch
+    [checked]="value === secondOption?.value"
+    (checkedChange)="onChange($event)"
+  ></app-switch>
+  <span class="double-switch__label">{{ secondOption?.label | titlecase }}</span>
+</div>

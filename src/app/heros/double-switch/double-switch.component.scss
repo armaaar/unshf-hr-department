@@ -1,0 +1,17 @@
+.double-switch {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  // fix angular custom web component line height
+  line-height: 0;
+
+  &__label {
+    margin: 0 15px;
+    &:first-child {
+      margin-left: 0;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

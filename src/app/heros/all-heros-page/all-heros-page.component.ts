@@ -1,6 +1,12 @@
 import { Component } from '@angular/core';
+import { DoubleSwitchOption } from '../double-switch/double-switch.component';
 import { HerosService } from '../heros.service';
 import { Hero } from '../store/heros/heros.interface';
+
+enum FilterOptions {
+  power,
+  name
+}
 
 @Component({
   selector: 'app-all-heros-page',
@@ -10,7 +16,20 @@ import { Hero } from '../store/heros/heros.interface';
 export class AllHerosPageComponent {
   heros: Hero[] = [];
   search: string = '';
-  filter: boolean = false;
+  filter: FilterOptions = FilterOptions.name;
+
+  get filterOptions(): DoubleSwitchOption<FilterOptions>[] {
+    return [
+      {
+        label: 'Sort by power',
+        value: FilterOptions.power
+      },
+      {
+        label: 'Sort by name',
+        value: FilterOptions.name
+      },
+    ]
+  }
 
   constructor(
     private herosService: HerosService

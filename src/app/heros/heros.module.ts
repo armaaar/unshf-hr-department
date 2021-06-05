@@ -10,6 +10,7 @@ import { HeroProfilePageComponent } from './hero-profile-page/hero-profile-page.
 import { InfoItemComponent } from './info-item/info-item.component';
 import { SearchInputComponent } from './search-input/search-input.component';
 import { SwitchComponent } from './switch/switch.component';
+import { DoubleSwitchComponent } from './double-switch/double-switch.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { SwitchComponent } from './switch/switch.component';
     HeroProfilePageComponent,
     InfoItemComponent,
     SearchInputComponent,
-    SwitchComponent
+    SwitchComponent,
+    DoubleSwitchComponent
   ],
   imports: [
     CommonModule,
