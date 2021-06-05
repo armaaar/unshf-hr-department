@@ -1,4 +1,7 @@
-# UnshfHrDepartment
+# UNSHF HR Department App
+
+(U.N.I.S.H.F) United Nations Super Heroes Fund, an employment agency for heroes, wants a simple UI to
+manage their H.R department. The App is for a simple coding challenge.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.3.
 
