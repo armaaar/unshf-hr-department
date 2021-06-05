@@ -1,0 +1,10 @@
+<div class="search-input">
+  <img src="assets/search-icon.png" class="search-input__icon" />
+  <input
+    type="text"
+    class="search-input__field"
+    [value]="value"
+    (input)="onInput($event)"
+    placeholder="Search"
+  />
+</div>

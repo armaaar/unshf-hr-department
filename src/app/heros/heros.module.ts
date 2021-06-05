@@ -8,13 +8,14 @@ import { HerosRoutingModule } from './heros-routing.module';
 import { AllHerosPageComponent } from './all-heros-page/all-heros-page.component';
 import { HeroProfilePageComponent } from './hero-profile-page/hero-profile-page.component';
 import { InfoItemComponent } from './info-item/info-item.component';
-
+import { SearchInputComponent } from './search-input/search-input.component';
 
 @NgModule({
   declarations: [
     AllHerosPageComponent,
     HeroProfilePageComponent,
-    InfoItemComponent
+    InfoItemComponent,
+    SearchInputComponent
   ],
   imports: [
     CommonModule,

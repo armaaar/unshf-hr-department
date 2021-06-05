@@ -5,10 +5,11 @@ import { Hero } from '../store/heros/heros.interface';
 @Component({
   selector: 'app-all-heros-page',
   templateUrl: './all-heros-page.component.html',
-  styleUrls: ['./all-heros-page.component.css']
+  styleUrls: ['./all-heros-page.component.scss']
 })
 export class AllHerosPageComponent {
   heros: Hero[] = [];
+  search: string = '';
 
   constructor(
     private herosService: HerosService

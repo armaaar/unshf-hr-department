@@ -1,9 +1,5 @@
-<p>all-heros-page works!</p>
-
-<ul>
-  <li *ngFor="let hero of heros">
-    <a [title]="hero.name + ' profile'" [routerLink]="['/heros', hero.id]">
-      {{ hero.name }}
-    </a>
-  </li>
-</ul>
+<div class="all-heros">
+  <div class="all-heros__filters-container">
+    <app-search-input [(value)]="search"></app-search-input>
+  </div>
+</div>

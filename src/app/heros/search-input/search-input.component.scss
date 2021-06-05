@@ -1,0 +1,22 @@
+$field-height: 40px;
+$icon-dimensions: 20px;
+
+.search-input {
+  position: relative;
+  display: inline-block;
+
+  &__field {
+    height: $field-height;
+    padding-left: $field-height;
+    width: 100%;
+  }
+
+  &__icon {
+    position: absolute;
+    height: $icon-dimensions;
+    width: $icon-dimensions;
+    top: ($field-height - $icon-dimensions) / 2;
+    left: ($field-height - $icon-dimensions) / 2;
+    pointer-events: none;
+  }
+}
