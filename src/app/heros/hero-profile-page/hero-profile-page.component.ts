@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { HerosService } from '../heros.service';
+import { Hero } from '../store/heros/heros.interface';
 
 @Component({
   selector: 'app-hero-profile-page',
@@ -8,11 +10,12 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class HeroProfilePageComponent implements OnInit {
   // TODO: Create Hero interface
-  hero: Object|undefined;
+  hero?: Hero;
 
   constructor(
     private route: ActivatedRoute,
     private router: Router,
+    private herosService: HerosService
   ) { }
 
   ngOnInit(): void {
@@ -26,8 +29,12 @@ export class HeroProfilePageComponent implements OnInit {
       return;
     }
 
-    // TODO: fetch hero, redirect to 404 if doesn't exist
+    // fetch hero
+    this.hero = this.herosService.getHeroById(heroId);
 
+    // redirect to 404 if doesn't exist
+    if (!this.hero) {
+      this.router.navigate(['404']);
+    }
   }
-
 }

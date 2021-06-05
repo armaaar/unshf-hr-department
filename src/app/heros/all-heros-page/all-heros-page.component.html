@@ -1,1 +1,9 @@
 <p>all-heros-page works!</p>
+
+<ul>
+  <li *ngFor="let hero of heros">
+    <a [title]="hero.name + ' profile'" [routerLink]="['/heros', hero.id]">
+      {{ hero.name }}
+    </a>
+  </li>
+</ul>
