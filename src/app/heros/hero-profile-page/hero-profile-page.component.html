@@ -1,3 +1,40 @@
-<p>hero-profile-page works!</p>
+<div class="hero-profile">
+  <div class="hero-profile__content">
+    <a routerLink="/heros">
+      <img
+        src="assets/back-icon.png"
+        alt="Back Icon"
+        title="Go back to heros page"
+        class="hero-profile__back-icon"
+      />
+    </a>
+  </div>
 
-<h1>{{ hero?.name }}</h1>
+  <div *ngIf="hero" [ngClass]="[
+    'hero-profile__content',
+    'hero-profile__content--bordered'
+  ]">
+    <img
+      [src]="hero.photo || 'assets/default-avatar.jpg'"
+      [alt]="hero.name + ' photo'"
+      [title]="hero.name + ' photo'"
+      class="hero-profile__photo"
+    />
+    <app-info-item label="Hero Name">{{ hero.name }}</app-info-item>
+    <app-info-item
+      *ngIf="hero.description"
+      label="Description"
+      [newLine]="true"
+    >
+      {{ hero.description }}
+    </app-info-item>
+    <app-info-item
+      *ngIf="hero.powers.length"
+      label="Powers"
+      [newLine]="true"
+    >
+      {{ hero.powers.join(', ') }}
+    </app-info-item>
+  </div>
+
+</div>

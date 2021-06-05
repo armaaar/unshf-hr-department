@@ -9,7 +9,7 @@ export const herosInitialState = <Hero[]>[
       'Know Angular'
     ],
     rate: 4,
-    photo: 'https://ksassets.timeincuk.net/wp/uploads/sites/55/2017/08/mrrobot-920x584.jpg'
+    photo: 'https://pyxis.nymag.com/v1/imgs/558/fdd/16005d91ad08ade2297449ebbb027671ac-29-mr-robot.rsquare.w190.jpg'
   },
   {
     id: 2,

@@ -1,0 +1,16 @@
+.info-item {
+  margin-bottom: 10px;
+  &__label {
+    display: inline-block;
+    font-weight: bold;
+    margin-right: 50px;
+    margin-bottom: 5px;
+  }
+
+  &__value {
+    display: inline-block;
+    &--new-line {
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,9 @@
+<div class="info-item">
+  <span class="info-item__label">{{ label }}:</span>
+  <span [ngClass]="{
+    'info-item__value': true,
+    'info-item__value--new-line': newLine
+  }">
+    <ng-content></ng-content>
+  </span>
+</div>

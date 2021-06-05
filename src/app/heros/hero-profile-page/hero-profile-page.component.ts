@@ -6,7 +6,7 @@ import { Hero } from '../store/heros/heros.interface';
 @Component({
   selector: 'app-hero-profile-page',
   templateUrl: './hero-profile-page.component.html',
-  styleUrls: ['./hero-profile-page.component.css']
+  styleUrls: ['./hero-profile-page.component.scss']
 })
 export class HeroProfilePageComponent implements OnInit {
   // TODO: Create Hero interface
