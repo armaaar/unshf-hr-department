@@ -1,0 +1,37 @@
+$padding: 5px;
+$ball-dimansions: 20px;
+$switch-color: #1bae9d;
+$ball-color: #ffffff;
+
+.switch {
+  display: inline-block;
+  position: relative;
+  height: $ball-dimansions + ($padding * 2);
+  width: ($ball-dimansions * 2) + ($padding * 2);
+  border-radius: $ball-dimansions;
+  background-color: $switch-color;
+  cursor: pointer;
+
+  &__field {
+    display: none;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: $padding;
+    left: $padding;
+    height: $ball-dimansions;
+    width: $ball-dimansions;
+    background-color: $ball-color;
+    border-radius: 100%;
+
+    transform: translateX(0);
+    transition: transform 500ms;
+  }
+
+  &--checked::before {
+    transform: translateX(100%);
+  }
+
+}

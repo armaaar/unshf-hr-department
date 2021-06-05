@@ -1,0 +1,10 @@
+<label [for]="uid" [ngClass]="{switch: true, 'switch--checked': checked}">
+  <input
+    type="checkbox"
+    [id]="uid"
+    [name]="uid"
+    class="switch__field"
+    [checked]="checked"
+    (change)="onChange($event)"
+  />
+</label>

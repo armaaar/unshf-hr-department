@@ -10,6 +10,7 @@ import { Hero } from '../store/heros/heros.interface';
 export class AllHerosPageComponent {
   heros: Hero[] = [];
   search: string = '';
+  filter: boolean = false;
 
   constructor(
     private herosService: HerosService
