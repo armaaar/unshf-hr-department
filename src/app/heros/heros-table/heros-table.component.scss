@@ -1,0 +1,26 @@
+.heros-table {
+  table-layout: auto;
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+
+  td, th {
+    border: 2px solid #cccdcf;
+    padding: 10px;
+    height: 40px;
+  }
+
+  &__power-cell {
+    width: 50%;
+  }
+
+  &__rate-cell {
+    text-align: center;
+    width: auto;
+  }
+
+  &__star {
+    width: 20px;
+    margin: 0 2px;
+  }
+}

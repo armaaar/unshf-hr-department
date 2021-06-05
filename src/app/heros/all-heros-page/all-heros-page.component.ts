@@ -31,6 +31,26 @@ export class AllHerosPageComponent {
     ]
   }
 
+  get filteredHeros(): Hero[] {
+    return this.heros
+      .filter(hero => hero.name.toLowerCase().includes(this.search.toLowerCase()))
+      .sort((a, b) => {
+        if (this.filter === FilterOptions.name) {
+          const aName = a.name.toLowerCase();
+          const bName = b.name.toLowerCase();
+
+          if (aName < bName) {
+              return -1;
+          }
+          if (aName > bName) {
+              return 1;
+          }
+          return 0;
+        }
+        return a.powers.length - b.powers.length;
+      })
+  }
+
   constructor(
     private herosService: HerosService
   ) {

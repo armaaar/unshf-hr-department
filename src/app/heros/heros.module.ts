@@ -11,6 +11,7 @@ import { InfoItemComponent } from './info-item/info-item.component';
 import { SearchInputComponent } from './search-input/search-input.component';
 import { SwitchComponent } from './switch/switch.component';
 import { DoubleSwitchComponent } from './double-switch/double-switch.component';
+import { HerosTableComponent } from './heros-table/heros-table.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { DoubleSwitchComponent } from './double-switch/double-switch.component';
     InfoItemComponent,
     SearchInputComponent,
     SwitchComponent,
-    DoubleSwitchComponent
+    DoubleSwitchComponent,
+    HerosTableComponent
   ],
   imports: [
     CommonModule,
